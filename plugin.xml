@@ -29,23 +29,15 @@
     
     <!-- ios -->
     <platform name="ios">
-        
-        <!-- iOS9 whitelisting -->
-        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
-            <array>
-                <string>twitter</string>
-                <string>fb</string>
-                <string>whatsapp</string>
-                <string>itms-apps</string>
-                <string>youtube</string>
-                <string>soundcloud</string>
-                <string>fb-messenger</string>
-                <string>instagram</string>
-            </array>
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+          <string>This application needs microphone access to dictate patient's report and uploading audio, audio dictation will be recorded and uploaded to the server for further processing.</string>
         </config-file>
-        
-        
-        
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+          <string>This application needs camera access for capturing and uploading images, captured images will be uploaded to the server and will be attached with the dictated audio file as a reference.</string>
+        </config-file> 
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+          <string>This application needs photo library access for selecting images from library to attach with audio dictation, images will be uploaded to the server and will be attached with the dictated audio file as a reference.</string>
+        </config-file> 
     </platform>
     
 </plugin>
